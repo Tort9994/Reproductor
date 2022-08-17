@@ -1,0 +1,33 @@
+.reproductor {
+  input[type="range"] {
+    background: transparent;
+    -webkit-appearance: none;
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+    }
+    &:hover {
+      outline: none;
+    }
+
+    &::-webkit-slider-thumb {
+      background: rgba($color: #000000, $alpha: 0.5);
+      width: 8px;
+      height: 8px;
+      cursor: pointer;
+      border: none;
+      border: 2px solid #ccc;
+      border-radius: 100%;
+      &:hover {
+        background: #ccc;
+      }
+      &::after {
+        background: #424242;
+      }
+    }
+    &::-webkit-slider-runnable-track {
+      width: 100%;
+      background: rgba($color: #000000, $alpha: 0.5);
+      height: 12px;
+    }
+  }
+}

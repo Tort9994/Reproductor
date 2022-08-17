@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #e9f1f7;
+  .contenedor {
+    width: 80%;
+    margin: 40px;
+    max-width: 800px;
+    .reproductor {
+      position: relative;
+      .video {
+        width: 100%;
+        vertical-align: top;
+        z-index: 90;
+      }
+      .controles {
+        opacity: 1;
+        transition: all 0.5s ease;
+      }
+      &:hover {
+        .controles {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

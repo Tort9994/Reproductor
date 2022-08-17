@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>reproductor</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <div class="contenedor">
+      <div class="reproductor">
+        <video src="./mp4/105 Introduccion.mp4" class="video">
+          <p>Tu navegador no soporta videos en HTML</p>
+        </video>
+        <div class="controles">
+          <input
+            type="range"
+            class="tiempo"
+            id="tiempo"
+            min="0"
+            value="0"
+            step="0.1"
+          />
+          <button class="btn play" id="btnPlay">
+            <span id="icono" class="fa fa-play"></span>
+          </button>
+          <input
+            type="range"
+            class="volumen"
+            id="volumen"
+            min="0"
+            max="1"
+            step="0.01"
+            value="1"
+          />
+        </div>
+      </div>
+    </div>
+    <script src="./js/reproductor.js"></script>
+  </body>
+</html>

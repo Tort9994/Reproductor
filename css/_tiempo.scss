@@ -1,0 +1,36 @@
+.contenedor {
+  .tiempo {
+    width: 100%;
+    z-index: 100;
+    position: absolute;
+    bottom: -3px;
+    background: #000;
+  }
+  .btn {
+    position: absolute;
+    .fa {
+      color: #fff;
+      position: relative;
+      left: 1px;
+    }
+  }
+  .play {
+    bottom: 25px;
+    left: 20px;
+    background: rgba($color: #000000, $alpha: 0.5);
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 100%;
+    cursor: pointer;
+    &:hover {
+      background: rgba($color: #000000, $alpha: 0.8);
+    }
+  }
+  .volumen {
+    position: absolute;
+    width: 100px;
+    bottom: 25px;
+    right: 20px;
+  }
+}
