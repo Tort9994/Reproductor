@@ -5,12 +5,14 @@ var video = document.getElementById("video"),
   volumen = document.getElementById("volumen");
 
 tiempo.setAttribute("max", video.duration);
+var intervalo;
 
 btnPlay.addEventListener("click", function () {
   if (icono.className == "fa fa-play") {
     video.play();
-    var intervalo = setInterval(barraTiempo, 1);
+    intervalo = setInterval(barraTiempo, 1000);
   } else {
+    clearInterval(intervalo);
     video.pause();
   }
   icono.classList.toggle("fa-play");
@@ -18,7 +20,7 @@ btnPlay.addEventListener("click", function () {
 });
 
 tiempo.addEventListener("change", function () {
-  video.currentTime = tiempo.value;
+  video.currentTime = this.value;
 });
 
 function barraTiempo() {
@@ -29,5 +31,5 @@ function barraTiempo() {
 }
 
 volumen.addEventListener("change", function () {
-  video.volumen = volumen.value;
+  video.volume = this.value;
 });
